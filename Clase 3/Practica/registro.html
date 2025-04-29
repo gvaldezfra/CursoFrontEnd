@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">
+            Nombre completo:
+        </label>
+        <br/>
+        <input id="nombre" name="nombre" type="text" minlength="3" maxlength="20" placeholder="Juan Perez" required/>
+        <br/>
+
+        <label for="correo">
+            Correo electronico:
+        </label>
+        <br/>
+        <input id="correo" name="correo" type="text" minlength="10" max="50" placeholder="juanito20@gmail.com" required />
+        <br/>
+
+        <label for="contraseña">
+            Contraseña:
+        </label>
+        <br/>
+        <input id="contraseña" name="contraseña" type="password" required/>
+        <br/>
+
+        <label for="nacimiento">
+            Fecha de nacimiento:
+        </label>
+        <br/>
+        <input id="nacimiento" name="nacimiento" type="date"/>
+        <br/>
+
+        <label for="pais">
+            Pais:
+        </label>
+        <br/>
+        <select name="pais" id="pais" required>
+            <option value="AR">Argentina</option>
+            <option value="BR">Brasil</option>
+            <option value="UY">Uruguay</option>
+        </select>
+        <br/>
+
+        <label for="condiciones">
+            Acepto los terminos y condiciones
+        </label>
+        <br/>
+        <input id="condiciones" name="condiciones" type="checkbox" required/>
+        <br/>
+
+        <button type="submit">Registrarse</button>
+        <a href="./index.html">Volver a la página principal</a>
+    </form>
+</body>
+</html>
