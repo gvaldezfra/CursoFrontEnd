@@ -1,0 +1,57 @@
+/*cascade style sheet*/
+/*Si esta mas abajo, tiene mas prioridad*/
+
+/* SI USO "*" ES UN SELECTOR UNIVERSAL que afecta a todos los elementos
+pero tiene menos prioridad */
+
+* {
+    font-family: sans-serif;
+}
+
+/*Selector de etiqueta, afecta a todos los h1, pero tiene
+menos prioridad que los selectores de clase*/
+
+/* NO USAR !important */
+h1{
+    color: rgb(88, 197, 78) !important;
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-decoration: underline;
+    text-transform: uppercase
+}
+
+/* h1 es un selector de elementos, afecta a todos los h1 */
+
+/*Selectores de clase*/
+
+/* Afecta solo a la clase segundo-titulo */
+
+.segundo-titulo{
+    color: rgb(42, 209, 70);
+    font-size: 50px;
+}
+
+.chiquito{
+    font-size: 20px;
+}
+
+#super-especial{
+    color: brown;
+}
+
+.parrafo{
+    font-size: 13px;
+    font-style: italic;
+    color: blue;
+    text-decoration: overline;
+    letter-spacing: 3px;
+    word-spacing: 40px;
+}
+
+.input-especial{
+    width: 500px;
+    height: 40px;
+    background-color: rgb(0, 255, 255)
+}
+/* Siempre tener en cuenta que el ultimo selector tiene mas prioridad */
+
