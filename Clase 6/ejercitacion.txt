@@ -1,0 +1,3 @@
+-Entrar a 5 pags a eleccion y plantear cual es el header, footer, main, aside
+
+-Hacer el navegador (en HTML) de Hostinger y de mdn (solo el aside de la izquierda)
