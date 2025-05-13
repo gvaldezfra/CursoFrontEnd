@@ -230,6 +230,7 @@ img{
     display: block;
     background-color: var(--neutral--100);
     height: auto;
+    color: var(--primary--800);
 }
 
 .header_container{
@@ -260,22 +261,111 @@ img{
 .head_grid_left_column{
     display: block;
     width: auto;
+    max-width: 463px;
     height: auto;
     text-align: start;
 }
+
+.header_info_heading_wrapper{
+    margin-bottom: 24px;
+}
+
 .header_info_discount{
     color: var(--primary--500)
 }
 .header_info_list_wrapper{
     display: flex;
     flex-direction: column;
+    margin-bottom: 22px;
 }
 
 .header_info_list_item{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.header_info_help_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_info_price_wrapper{
+    margin-bottom: 2px;
+}
+
+.header_info_price_text{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.header_info_price_value{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.header_info_price_time_wrapper{
+    margin-bottom: 24px;
+}
+
+.header_info_price_time{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-decoration-color: var(--primary--800);
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+}
+
+.header_info_button_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_info_ready_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--primary--500);
+    color: var(--neutral--100);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 48px;
+    border: 2px solid var(--primary--500);
+}
+
+.ready_button{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+
+}
+
+.header_info_countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary--100);
+    width: 160px;
+    height: 48px;
+    border-radius: 8px;
+    color: var(--primary-500);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.header_info_warranty_wrapper{
+    margin-top: 12px;
 }
 
 /* RIGHT COLUMN */
@@ -426,3 +516,30 @@ img{
     color: var(--neutral--100);
 }
 /* FOOTER */
+
+.footer_wrapper{
+    padding-top: 56px;
+}
+
+.footer_grid_container{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1208px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+}
+
+/* Footer content */
+/* Footer logo section */
+
+.social_links_wrapper{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Footer copyright section */

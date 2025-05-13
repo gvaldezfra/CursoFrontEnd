@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Cuenta regresiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #cuenta {
+      font-size: 2em;
+      color: #e63946;
+    }
+  </style>
 </head>
 <body>
-    <footer>
-        <div class="footer-container">
-          <div class="footer-section">
-            <img src="https://www.hostinger.com/_nuxt/img/logo.8e0b6f5.svg" alt="Hostinger Logo" class="footer-logo">
-            <p>Soluciones de hosting confiables y accesibles para todos.</p>
-          </div>
-          <div class="footer-section">
-            <h4>Enlaces útiles</h4>
-            <ul>
-              <li><a href="#">Planes de Hosting</a></li>
-              <li><a href="#">Dominios</a></li>
-              <li><a href="#">Soporte</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Contacto</h4>
-            <p>Email: soporte@hostinger.com</p>
-            <p>Teléfono: +54 11 1234 5678</p>
-            <div class="social-links">
-              <a href="#">Facebook</a>
-              <a href="#">Twitter</a>
-              <a href="#">Instagram</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Hostinger Argentina. Todos los derechos reservados.</p>
-        </div>
-      </footer>
+
+<h1>Cuenta regresiva</h1>
+<div id="cuenta"></div>
+
+<script>
+  // Establecer la fecha objetivo (AAAA, MM - 1, DD, HH, MM, SS)
+  const fechaObjetivo = new Date(2025, 5, 1, 0, 0, 0); // 1 de junio de 2025
+
+  function actualizarCuentaRegresiva() {
+    const ahora = new Date().getTime();
+    const diferencia = fechaObjetivo - ahora;
+
+    if (diferencia <= 0) {
+      document.getElementById("cuenta").innerHTML = "¡Tiempo terminado!";
+      clearInterval(intervalo);
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("cuenta").innerHTML =
+  `${String(dias).padStart(2, '0')}: ${String(horas).padStart(2, '0')}: ${String(minutos).padStart(2, '0')}: ${String(segundos).padStart(2, '0')}`;
+
+  }
+
+  // Actualizar cada segundo
+  const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
+  actualizarCuentaRegresiva(); // Llamar al inicio
+</script>
+
 </body>
 </html>
-  
