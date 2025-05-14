@@ -89,6 +89,10 @@ body{
     display: block;
     background-color: var(--neutral--0);
     font-family: "DM Sans", sans-serif;
+    letter-spacing: normal;
+    text-decoration-style: solid;
+    word-spacing: normal;
+
 }
 
 /* NAV */
@@ -97,7 +101,7 @@ nav{
     display: flex;
     flex-direction: row;
     height: 88px;
-    background-color: var(--neutral--100);
+    background-color: var(--neutral--0);
     position: sticky;
     top: 0;
     width: 100vw
@@ -215,7 +219,7 @@ img{
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
-    background-color: var(--neutral--100);
+    background-color: var(--neutral--0);
     border-radius: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -228,7 +232,7 @@ img{
 
 .header{
     display: block;
-    background-color: var(--neutral--100);
+    background-color: var(--neutral--0);
     height: auto;
     color: var(--primary--800);
 }
@@ -252,9 +256,11 @@ img{
 .head_grid_column_wrapper{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    max-width: fit-content;
 }
 
 /* LEFT COLUMN */
@@ -268,6 +274,20 @@ img{
 
 .header_info_heading_wrapper{
     margin-bottom: 24px;
+}
+
+.header_info_title{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+.header_info_subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-top: 8px;
 }
 
 .header_info_discount{
@@ -379,6 +399,31 @@ img{
     height: auto;
 }
 
+/* HEADER MEDIA QUERIES */
+@media (max-width: 1362px) {
+
+    .head_grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        max-width: 1208px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .header_grid_column_wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        max-width: fit-content
+    }
+}
 
 /* SECTION SERVICES */
 
@@ -405,6 +450,7 @@ img{
     font-weight: 700;
     line-height: 40px;
     color: var(--neutral--100);
+    letter-spacing: 1px;
 }
 
 .services_description{
@@ -518,6 +564,7 @@ img{
 /* FOOTER */
 
 .footer_wrapper{
+    background-color: var(--light-blue--100);
     padding-top: 56px;
 }
 
@@ -535,11 +582,101 @@ img{
 /* Footer content */
 /* Footer logo section */
 
+.footer_logo_section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    line-height: 24px;
+}
+
 .social_links_wrapper{
+    order: 0;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 16px;
 }
 
+.social_link{
+    background-color: transparent;
+    color: var(--neutral--100);
+    width: 32;
+    height: 32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_h_logo{
+    order: -1;
+}
+
+.payment_methods_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.payment_method{
+    background-color: transparent;
+    color: var(--neutral--100);
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_method_text{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary--500);
+    text-align: center;
+    text-decoration-style: solid;
+}
+
+.legal_links_wrapper{
+    display: flex;
+    flex-direction: row;
+    line-height: 24px;
+}
+
+.legal_links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+}
+.legal_link{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary--800);
+    text-align: center;
+}
+
 /* Footer copyright section */
+
+.footer_copyright_section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid var(--light-blue--200);
+}
+
+.footer_copyright_text{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary--800);
+}
