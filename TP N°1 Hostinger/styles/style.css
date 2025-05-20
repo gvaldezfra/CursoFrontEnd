@@ -92,8 +92,16 @@ body{
     letter-spacing: normal;
     text-decoration-style: solid;
     word-spacing: normal;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+    width: 100%;
 }
 
+main{
+    width: 100%;
+}
 /* ------------------------------------------------------------------------- */
 
 /* NAV */
@@ -266,6 +274,7 @@ img{
     margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
+    justify-content: center;
 }
 
 .head_grid_column_wrapper{
@@ -273,7 +282,7 @@ img{
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 8px;
 }
@@ -345,6 +354,10 @@ img{
     line-height: 56px;
 }
 
+.header_info_price_time_wrapper{
+    margin-bottom: 24px;
+    line-height: 24px;
+    }
 
 
 .header_info_price_time{
@@ -381,13 +394,14 @@ img{
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-
+    flex-basis: auto;
 }
 
 .header_info_countdown{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: auto;
     background-color: var(--primary--100);
     width: 160px;
     height: 48px;
@@ -483,11 +497,28 @@ img{
     line-height: 24px;
     }
 
+    .header_info_wrapper{
+    width: 100%;
+    }
+
+    .services_section{
+        width: 100%;
+    }
 }
 
-@media (min_width: 1025px) and (max-width: 1446px) {
+@media (min-width: 1025px) and (max-width: 1446px) {
+
+    .header_wrapper{
+        justify-items: center;
+    }
+
+    .head_grid{
+        justify-content: center;
+        justify-items: center;
+    }
+
     .head_grid_column_wrapper{
-        width: 80%;
+        width: 100%;
     }
 
     .header_image{
@@ -495,6 +526,58 @@ img{
     height: auto;
     }
 
+}
+
+@media (max-width: 767px){
+    .header_container{
+        padding-top: 14px;
+        padding-bottom: 36px;
+    }
+
+    .head_grid{
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 540px;
+    }
+    .head_grid_left_column{
+        width: 100%;
+    }
+
+    .header_info_button_wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    }
+    .header_info_ready_button{
+        width: 100%;
+    }
+
+    .header_info_countdown{
+        width: 100%;
+    }
+
+    .header_info_title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: normal;
+    }
+
+    .header_info_subtitle{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .header_info_price_value{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    }
+    
 }
 
 /* NAV */
@@ -521,7 +604,7 @@ img{
         position: fixed;
         width: 24px;
         height: 24px;
-    }    
+    }   
 }
 
 @media (min-width: 1140px) {
@@ -706,21 +789,30 @@ img{
 
 /* Footer content */
 /* Footer logo section */
+.footer{
+    bottom: 0;
+    position: static;
+}
 
 .footer_logo_section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-items: normal;
+    align-items: center;
     gap: 16px;
     line-height: 24px;
 }
 
 .social_links_wrapper{
     order: 0;
+    position: static;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
+    flex-basis: 50%;
+    flex-grow: 1;
     gap: 16px;
 }
 
@@ -735,18 +827,23 @@ img{
 }
 
 .footer_h_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     order: -1;
 }
 
 .payment_methods_wrapper{
+    order: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-basis: 50%;
     justify-content: start;
     align-items: center;
     gap: 8px;
-    height: 40px;
 }
+
 
 .payment_method{
     background-color: transparent;
@@ -756,6 +853,16 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.payment_method_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    border: 1px solid var(--light-blue--200);
+    border-radius: 6px;
 }
 
 .payment_method_text{
@@ -770,6 +877,7 @@ img{
     display: flex;
     flex-direction: row;
     line-height: 24px;
+    order: 4;
 }
 
 .legal_links{
@@ -798,10 +906,92 @@ img{
     padding-top: 24px;
     padding-bottom: 24px;
     border-top: 1px solid var(--light-blue--200);
+    column-gap: 16px;
 }
 
 .footer_copyright_text{
     font-size: 14px;
     font-weight: 400;
     color: var(--primary--800);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .footer_grid_container{
+        max-width: 768px;
+    }
+    .legal_links_wrapper{
+        order: 0;
+    }
+    .payment_methods_wrapper{
+        order: 0;
+        flex-basis: auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:767px){
+    
+    .services_section{
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .services_title_wrapper{
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .services_cards_wrapper{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .services_title{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .footer_grid_container{
+        max-width: 540px;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 0;
+    }
+
+    .footer_wrapper{
+        padding-top:0;
+        height: auto;
+    }
+    .footer_logo_section{
+        margin-top: 24px;
+    }
+    .footer_h_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+    }
+    .social_links_wrapper{
+    order: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    flex-basis: 100%;
+    justify-content: space-between;
+    }
+    .payment_methods_wrapper{
+        margin-bottom: 24px;
+        max-width: 300px;
+        flex-basis: auto;
+    }
+
+    .footer_copyright_section{
+        padding-top: 24px;
+        padding-bottom: 16px;
+        gap: 16px;
+    }
 }
