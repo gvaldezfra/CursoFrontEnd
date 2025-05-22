@@ -611,27 +611,12 @@ nav.scrolled {
 
 
 /* MEDIA QUERIES */
-@media (max-width: 1024px) {
-    .footer_grid_container{
-        max-width: 768px;
-    }
-    .legal_links_wrapper{
-        order: 0;
-    }
-    .payment_methods_wrapper{
-        order: 0;
-        flex-basis: auto;
-        margin-bottom: 40px;
-    }
-}
 
 @media (max-width:767px){
-    
     .services_section{
         padding-top: 56px;
         padding-bottom: 56px;
     }
-
     .services_title_wrapper{
         padding-left: 16px;
         padding-right: 16px;
@@ -642,20 +627,17 @@ nav.scrolled {
         padding-left: 16px;
         padding-right: 16px;
     }
-
     .services_title{
         font-size: 24px;
         font-weight: 700;
         line-height: 32px;
     }
-
     .footer_grid_container{
         max-width: 540px;
         padding-left: 16px;
         padding-right: 16px;
         gap: 0;
     }
-
     .footer_wrapper{
         padding-top:0;
         height: auto;
@@ -679,21 +661,57 @@ nav.scrolled {
         max-width: 300px;
         flex-basis: auto;
     }
-
     .footer_copyright_section{
         padding-top: 24px;
         padding-bottom: 16px;
         gap: 16px;
     }
+        .header_container{
+        padding-top: 14px;
+        padding-bottom: 36px;
+    }
+    .head_grid{
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 540px;
+    }
+    .head_grid_left_column{
+        width: 100%;
+    }
+    .header_info_button_wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    }
+    .header_info_ready_button{
+        width: 100%;
+    }
+    .header_info_countdown{
+        width: 100%;
+    }
+    .header_info_title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: normal;
+    }
+    .header_info_subtitle{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    .header_info_price_value{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    }   
 }
 
 
-/* -------------------------------------------------------------------- */
-
-/* MEDIA QUERIES */
-
 @media (max-width: 1024px) {
-    
     .head_grid_column_wrapper{
     max-width: 688px;
     display: grid;
@@ -754,9 +772,9 @@ nav.scrolled {
     .services_section{
         width: 100%;
     }
-        .services_cards_wrapper{
-        grid-template-columns: repeat(1, 1fr);
-        max-width: 768px;
+    .services_cards_wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 768px;
     }
     .services_title_wrapper{
         max-width: 768px;
@@ -767,6 +785,17 @@ nav.scrolled {
     line-height: 40px;
     color: var(--neutral--100);
     letter-spacing: 1px;
+    }
+        .footer_grid_container{
+        max-width: 768px;
+    }
+    .legal_links_wrapper{
+        order: 0;
+    }
+    .payment_methods_wrapper{
+        order: 0;
+        flex-basis: auto;
+        margin-bottom: 40px;
     }
 }
 
@@ -786,49 +815,4 @@ nav.scrolled {
     max-width: 616px;
     height: auto;
     }
-}
-
-@media (max-width: 767px){
-    .header_container{
-        padding-top: 14px;
-        padding-bottom: 36px;
-    }
-    .head_grid{
-        padding-left: 16px;
-        padding-right: 16px;
-        max-width: 540px;
-    }
-    .head_grid_left_column{
-        width: 100%;
-    }
-    .header_info_button_wrapper{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    }
-    .header_info_ready_button{
-        width: 100%;
-    }
-    .header_info_countdown{
-        width: 100%;
-    }
-    .header_info_title{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    letter-spacing: normal;
-    }
-    .header_info_subtitle{
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 24px;
-    }
-    .header_info_price_value{
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42px;
-    }   
 }
