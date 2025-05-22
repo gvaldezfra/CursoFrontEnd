@@ -25,53 +25,12 @@
     --primary--800: #2f1c6a;
     --primary--900: #261559;
     --primary--1000: #1f1346;
-    --meteorite--50: #f5f5ff;
-    --meteorite--100: #eaeaff;
-    --meteorite--200: #cbc8ff;
-    --meteorite--300: #b6b2ff;
-    --meteorite--400: #a19bff;
-    --meteorite--500: #8c85ff;
     --light-blue--50: #fafbff;
     --light-blue--100: #f4f5ff;
     --light-blue--200: #d5dfff;
     --light-blue--300: #c3cce9;
     --light-blue--400: #b0b9d4;
     --light-blue--500: #888faa;
-    --danger--50: #fff3f7;
-    --danger--100: #ffe8ef;
-    --danger--200: #fea8c2;
-    --danger--300: #fd8bad;
-    --danger--400: #fc6e99;
-    --danger--500: #fc5185;
-    --danger--600: #d63163;
-    --danger--700: #b22852;
-    --warning--100: #fff8e2;
-    --warning--200: #ffd28c;
-    --warning--500: #ffcd35;
-    --warning--600: #fea419;
-    --warning--700: #9f6000;
-    --success--100: #def4f0;
-    --success--200: #80d8c8;
-    --success--500: #00b090;
-    --success--600: #008361;
-    --neon--500: #cf0;
-    --neon--600: #bded00;
-    --peridot--500: #0f0;
-    --peridot--600: #20e052;
-    --niaga-primary: #007aff;
-    --niaga-primary-dark: #002199;
-    --niaga-primary-light: #e0efff;
-    --niaga-primary-lightest: #ebf4ff;
-    --niaga-primary-chart: #80bdff;
-    --niaga-meteorite: #43ccff;
-    --niaga-meteorite-dark: #01012e;
-    --niaga-meteorite-light: #f5faff;
-    --niaga-warning: #ff9800;
-    --niaga-warning-dark: #ff5a00;
-    --niaga-warning-chart: #ffcb80;
-    --niaga-white-blue: #f5faff;
-    --niaga-darken-light: #e0efff;
-    --niaga-blue-dark: #265ab2;
 }
 
 *{
@@ -113,14 +72,7 @@ nav{
     background-color: var(--neutral--0);
     position: sticky;
     top: 0;
-    width: 100vw
-}
-/*  */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: white;
+    width: 100vw;
     transition: box-shadow 0.1s ease;
 }
 
@@ -128,6 +80,7 @@ nav {
 nav.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .navigation_logo{
     padding-top: 29px;
     padding-bottom: 29px;
@@ -247,6 +200,38 @@ img{
     padding-left: 16px;
     padding-right: 16px;
     border: 2px solid var(--neutral--600);
+}
+
+@media (max-width: 1139px){   
+    nav{
+        height: 62px;
+    }
+
+    .navigation_logo{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 0;
+    }
+    .navigation_menu{
+        display: none;
+    }
+    .navigation_menu_mobile_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 16px;
+        top: 16px;
+        position: fixed;
+        width: 24px;
+        height: 24px;
+    }   
+}
+
+@media (min-width: 1140px) {
+    .navigation_menu_mobile{
+        display: none;
+    }
 }
 
 /* ------------------------------------------------------------------------- */
@@ -580,38 +565,6 @@ img{
     
 }
 
-/* NAV */
-@media (max-width: 1139px){   
-    nav{
-        height: 62px;
-    }
-
-    .navigation_logo{
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 20px;
-    padding-right: 0;
-    }
-    .navigation_menu{
-        display: none;
-    }
-    .navigation_menu_mobile_icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        right: 16px;
-        top: 16px;
-        position: fixed;
-        width: 24px;
-        height: 24px;
-    }   
-}
-
-@media (min-width: 1140px) {
-    .navigation_menu_mobile{
-        display: none;
-    }
-}
 
 /* ------------------------------------------------------------------------- */
 
